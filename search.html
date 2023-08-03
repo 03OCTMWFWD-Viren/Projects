@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product search | javascript</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        body{
+            background-color: #333;
+        }
+        .main{
+            width: 100%;
+            padding: 0% 0% 5% 0%;
+        }
+        .container{
+            width: 90%;
+            margin: 0 auto;
+        }
+        .container .shodo{
+            display: flex;
+            flex-direction: column;
+            padding: 3% 0%;
+            align-items: center;
+        }
+        .container .shodo h1{
+            letter-spacing: 3px;
+            display: inline-block;
+            width: fit-content;
+            border-top: 2px solid aqua;
+            border-bottom: 2px solid aqua;
+            color: aliceblue;
+            padding: 10px 0px;
+        }
+        .container .shodo input{
+            width: 60%;
+            padding: 5px 20px;
+            margin-top: 2%;
+            background-color: transparent;
+            border: 2px solid darkslateblue;
+            font-size: 18px;
+            text-transform: capitalize;
+            letter-spacing: 2px;
+        }
+        .container .shodo input::placeholder{
+            color: aqua;
+        }
+
+        .product-items{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .product-items .product{
+            width: 30%;
+            text-align: center;
+        }
+        .product-items .product h3{
+            /* margin: 15px 0px; */
+            padding-top: 20px;
+        }
+        .product-items .product .im-box{
+            height: 250px;
+        }
+        .product-items .product img{
+            width: 100%;
+            height: inherit;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="container">
+            <div class="shodo">
+                <h1>SARI PRODUCTS</h1>
+                <input type="text" id="find" placeholder="please search here..."  onkeyup="search()">
+            </div>
+
+            <div class="product-items">
+                <div class="product">
+                    <div class="im-box">
+                    <img src="https://img.freepik.com/free-photo/view-tiger-animal-wild_23-2150374850.jpg?t=st=1689782593~exp=1689786193~hmac=8a11d687df9ab8f3c7dae95bb7e7648eb1b3dc26f629d2e9dca34275f06fdbc9&w=1060" alt="">
+                    </div>
+                    <h3> Tiger </h3>
+                </div>
+                <div class="product">
+                    <div class="im-box">
+                    <img src="https://img.freepik.com/free-photo/majestic-lion-rests-africa-wilderness-area-generated-by-ai_188544-16817.jpg?t=st=1689782730~exp=1689786330~hmac=16ebe1219635f02a138c25169b81caa61488af47dc60a9d73a008a083533d38f&w=1060" alt="">
+                </div>
+                    <h3> Lion </h3>
+                </div>
+                <div class="product">
+                    <div class="im-box">
+                    <img src="https://img.freepik.com/free-photo/view-black-panther-nature_23-2150460897.jpg?t=st=1689782971~exp=1689786571~hmac=69d561e6d92f8a6a8a5da19116fc11ddc5674f76d8f08907fed79d17abd7a2a6&w=1060" alt="">
+                </div>
+                    <h3> Black Panther </h3>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function search(){
+            let finder = document.getElementById('find').value.toUpperCase();
+            let item = document.querySelectorAll('.product'); 
+            let l = document.getElementsByTagName('h3');
+
+            for(var i = 0;i<=l.length;i++){
+                let a=item[i].getElementsByTagName('h3')[0];
+
+                let value=a.innerHTML || a.innerText || a.textContent;
+
+                if(value.toUpperCase().indexOf(finder) > -1){
+                    item[i].style.display="";
+                }else{
+                    item[i].style.display="none";
+                }
+            }
+
+        }
+    </script>
+</body>
+</html>

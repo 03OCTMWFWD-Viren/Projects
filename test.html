@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .item {
+            position: relative;
+        }
+
+        /* .data {
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 10%;
+            color: white;
+        } */
+
+
+        /* header css  */
+
+        header {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .container {
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .logo span {
+            color: red;
+        }
+
+        .logo p {
+            font-size: 30px;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .navmenu {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        li,
+        a {
+            list-style: none;
+            text-decoration: none;
+            padding-right: 20px;
+            font-size: 20px;
+            display: block;
+            line-height: 35px;
+        }
+
+        .Drop-box {
+            display: none;
+            position: absolute;
+            top: 60px;
+        }
+
+        .Dropdown {
+            display: block;
+        }
+
+        .Dropdown:hover .Drop-box {
+            display: block;
+            height: 150px;
+            width: 170px;
+            border-radius: 3%;
+            padding-left: 20px;
+            /* background-color: rgba(23, 16, 16, 0.6); */
+        }
+
+        .search1 {
+            justify-content: center;
+            padding: 10px;
+            border-radius: 70%;
+        }
+
+        .search1:hover {
+            background-color: red;
+        }
+
+        .moon {
+            justify-content: center;
+            font-size: 23px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="owl-carousel owl-theme">
+        <div class="item">
+            <img src="https://images.hdqwalls.com/wallpapers/bthumb/marvel-duel-iron-man-4k-vm.jpg" alt="">
+
+            <!-- header start  -->
+            <header>
+                <div class="container">
+                    <nav class="navbar">
+                        <div class="logo">
+                            <p>Wild<span>live.</span></p>
+                        </div>
+                        <div class="navmenu">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Services</a></li>
+                            <div class="Dropdown">
+                                <li><a href="#">Pages <i class="fa-solid fa-chevron-up fa-flip-both"></i>
+                                        <div class="Drop-box">
+                                            <ul>
+                                                <li><a href="">Blog posts</a></li>
+                                                <li><a href="">Blog single</a></li>
+                                                <li><a href="">404 page</a></li>
+                                                <li><a href="">Landing page</a></li>
+                                            </ul>
+                                    </a>
+                                </li>
+                            </div>
+                            <li><a href="#">Contact</a></li>
+                            <i class="fa-solid fa-magnifying-glass search1"></i>
+                        </div>
+                        <i class="fa-regular fa-moon moon"></i>
+                    </nav>
+                    <!-- <div class="data">
+                        <h2>Protect wildlife, protect <br> nature. </h2>
+                        <p>Lorem ipsum dolor sit amet consectetur ipsum elit. Qui eligendi vitae sit.Ea
+                            ipsum sed consequuntur illum facere.
+                        </p>
+                    </div> -->
+                </div>
+        </div>
+        </header>
+    </div>
+    <!-- <div class="item">
+            <img src="https://images.hdqwalls.com/wallpapers/bthumb/marvel-duel-thor-oa.jpg" alt="">
+            <div class="data">
+                <h5>Protect wildlife, protect nature. </h5>
+                <p>Lorem ipsum dolor sit amet consectetur ipsum elit. Qui eligendi vitae sit.Ea
+                    ipsum sed consequuntur illum facere.
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="https://images.hdqwalls.com/wallpapers/bthumb/marvel-duel-iron-man-4k-vm.jpg" alt="">
+            <div class="data">
+                <h5>Protect wildlife, protect nature. </h5>
+                <p>Lorem ipsum dolor sit amet consectetur ipsum elit. Qui eligendi vitae sit.Ea
+                    ipsum sed consequuntur illum facere.
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="https://images.hdqwalls.com/wallpapers/bthumb/marvel-duel-thor-oa.jpg" alt="">
+            <div class="data">
+                <h5>Protect wildlife, protect nature. </h5>
+                <p>Lorem ipsum dolor sit amet consectetur ipsum elit. Qui eligendi vitae sit.Ea
+                    ipsum sed consequuntur illum facere.
+                </p>
+            </div>
+        </div> -->
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script><!-- latest jquery file -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script type="text/javascript">
+        (function ($) {
+            'use strict';
+            $('.owl-carousel').owlCarousel({
+                loop: true,
+                margin: 10,
+                nav: false,
+                dots: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 1
+                    },
+                    1000: {
+                        items: 1
+                    }
+                }
+            })
+
+        })(jQuery); 
+    </script>
+
+
+</body>
+
+</html>
